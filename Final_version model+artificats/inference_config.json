@@ -1,0 +1,17 @@
+{
+  "architecture": "StegDetectorV3",
+  "backbone_a": "convnext_tiny",
+  "backbone_b": "densenet121",
+  "backbone_out_dim": 384,
+  "fused_dim": 768,
+  "attn_hidden": 256,
+  "patch_size": 48,
+  "num_patches": 50,
+  "srm_location": "inside_model_TrainableSRMAdapter",
+  "input_format": "raw grayscale replicated to 3ch float32 [0,1]",
+  "data_note": "Input must be lossless PNG. JPEG inputs will fail due to quantization noise.",
+  "best_epoch": 16,
+  "best_phase": 3,
+  "best_auc": 0.999996,
+  "checkpoint": "best_model.pth"
+}
